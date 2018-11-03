@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import api from "./routes/api";
 import mysql from "mysql";
 import mysqlKey from "../keys/mysqlKey";
+import multer from "multer";
+const upload = multer();
 
 const app = express();
 
@@ -29,8 +31,7 @@ app.use(bodyParser.json());
 //router
 app.use("/api", api);
 
-export { connection };
-
 app.listen(port, () => {
   console.log("Express server is listening on port", port);
 });
+export { connection, upload };
