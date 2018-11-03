@@ -18,12 +18,15 @@ var app = (0, _express2.default)();
 
 var port = 8080;
 
-//middlewares
+//SERVE STATIC FILES = REACT PROJECT
+app.use("/", _express2.default.static(__dirname + "/../../client/build"));
+console.log(__dirname + "/../../../client/build");
 
+//middlewares
 app.use(_bodyParser2.default.json());
 
 //router
-app.use("/", _api2.default);
+app.use("/api", _api2.default);
 
 app.listen(port, function () {
   console.log("Express server is listening on port", port);
