@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "../Main/presenter";
 import LoginContainer from "components/Login/container";
+import LoginSecondContainer from "components/LoginSecond/container";
 
 const cx = classNames.bind(styles);
 
@@ -25,6 +26,7 @@ const PublicComponent = () => (
     <Switch>
       <Route exact path="/" component={Main} />
       <Route exact path="/login" component={LoginContainer} />
+      <Route exact path="/login/password" component={LoginSecondContainer} />
       <Route component={Main} />
     </Switch>
   </div>
