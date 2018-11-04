@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import classNames from "classnames/bind";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import HomeContainer from "../Home/HomeContainer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "../Main/presenter";
+import LoginContainer from "components/Login/container";
 
 const cx = classNames.bind(styles);
 
@@ -15,8 +16,18 @@ const App = ({ isLoggedIn }) => (
   </Router>
 );
 
-const PrivateComponent = () => <div>priavteComponent</div>;
+const PrivateComponent = () => (
+  <div className={cx("PrivateContainer")}>priavteComponent</div>
+);
 
-const PublicComponent = () => <div>public Component</div>;
+const PublicComponent = () => (
+  <div className={cx("PublicContainer")}>
+    <Switch>
+      <Route exact path="/" component={Main} />
+      <Route exact path="/login" component={LoginContainer} />
+      <Route component={Main} />
+    </Switch>
+  </div>
+);
 
 export default App;

@@ -1,0 +1,43 @@
+@import 'utils/utils.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header{
+        margin-top: 138px;
+        img {
+            height: 92px;
+            width: 272px;
+        }
+    }
+
+    .searchBar{
+        margin-top: 23px;
+        input {
+            width: 585px;
+            height: 40px;
+            border: none;
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            outline: none;
+        }
+    }
+
+    .bottom{
+        margin-top: 33px;
+        display: flex;
+        justify-content: center;
+        div{
+            background: $veryWeakGrayColor;
+            color: $strongGrayColor;
+            font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 9px 18px;
+            margin-right: 8px;
+        }
+    }
+}

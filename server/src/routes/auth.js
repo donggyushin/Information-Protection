@@ -19,11 +19,14 @@ router.post("/login", upload.array(), (req, res, next) => {
       console.log(err);
       return res.json({
         ok: false,
-        message: "Error occured in Database System, sorry for inconvenience"
+        message: "Error occured in Database System, sorry for inconvenience",
+        loading: false
       });
     }
     return res.json({
-      ok: true
+      ok: true,
+      loading: true,
+      message: ""
     });
   });
 });
