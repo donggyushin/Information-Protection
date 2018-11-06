@@ -1,1 +1,94 @@
-@import "utils/utils.scss"
+@import "utils/utils.scss";
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loginForm {
+        width: $loginFormWidth;
+        height: $loginFormHeight;
+        border: none;
+        border-radius: 10px;
+        box-shadow: $boxShadowProperty;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 74px;
+            height: auto;
+            margin-top: 48px;
+        }
+
+        .username {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .userId {
+            margin-top: 15px;
+            width: 243px;
+            height: 27px;
+            border-radius: 40px;
+            border: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            padding-left: 4px;
+            margin-bottom: 63px;
+            .circle{
+                background: #455A64;
+                border: 0;
+                border-radius: 50%;
+                color: white;
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+            }
+            .userEmail{
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+
+        .passwordInput {
+            width: $loginFormInnerWidth;
+            height: 28px;
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-size: 1rem;
+            margin-bottom: 45px;
+            font-weight: 600;
+        }
+        .bottom{
+            display: flex;
+            width: $loginFormInnerWidth;
+            justify-content: space-between;
+            align-items: center;
+            .blueTxt{
+                font-size: 1rem;
+                color: #1A73E8;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            .button {
+                width: 88px;
+                background: $loginBlueButton;
+                height: 35px;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+}
+

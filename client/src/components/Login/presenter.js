@@ -4,7 +4,13 @@ import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);
 
-const Login = ({ loading, username, handleInputChange, clickNextButton }) => (
+const Login = ({
+  loading,
+  username,
+  handleInputChange,
+  clickNextButton,
+  EnterKeyPressedDown
+}) => (
   <div className={cx("container")}>
     <div className={cx("loginForm")}>
       <img src={require("images/google.png")} alt="google.png" />
@@ -17,6 +23,7 @@ const Login = ({ loading, username, handleInputChange, clickNextButton }) => (
           onChange={handleInputChange}
           placeholder="이메일 또는 휴대전화"
           value={username}
+          onKeyPress={EnterKeyPressedDown}
         />
       </form>
       <span className={cx("blueText", "forgot")}>이메일을 잊으셨나요?</span>

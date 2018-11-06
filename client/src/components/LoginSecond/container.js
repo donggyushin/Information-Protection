@@ -4,11 +4,14 @@ import { connect } from "react-redux";
 
 class LoginSecondContainer extends Component {
   render() {
-    return <LoginSecond />;
+    const { username } = this.props;
+    return <LoginSecond username={username} />;
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  username: state.user.username
+});
 
 const mapDispatchToProps = dispatch => ({});
 
